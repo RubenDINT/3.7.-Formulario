@@ -1,0 +1,74 @@
+﻿<Window x:Class="Formulario.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Formulario"
+        mc:Ignorable="d"
+        Title="Formulario" Height="450" Width="800">
+    <Grid>
+        <DockPanel LastChildFill="True">
+            <TextBlock HorizontalAlignment="Center"
+                       FontSize="40"
+                       DockPanel.Dock="Top">Formulario</TextBlock>
+            <DockPanel DockPanel.Dock="Bottom">
+                    <TextBlock FontSize="20" FontStyle="Italic">Rubén Fortes-Marques</TextBlock>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                    <Button Height="30"
+                            Width="80"
+                            HorizontalAlignment="Right"
+                            Margin="10">Aceptar</Button>
+                    <Button Height="30"
+                            Width="80"
+                            HorizontalAlignment="Right"
+                            Margin="10">Cancelar</Button>
+                </StackPanel>
+                    
+            </DockPanel>
+                <Image Source="assets/foto.jpg" DockPanel.Dock="Right" Margin="0,0,10,0"></Image>
+            <Border DockPanel.Dock="Top" Background="Aquamarine" BorderBrush="Black" BorderThickness="3" Margin="20">
+                <StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="8">
+                        <TextBlock Width="70">Nombre:</TextBlock>
+                        <TextBox Height="15" Width="400"></TextBox>
+                        <Image Source="assets/info.ico" Width="20" ToolTip="Máximo 100 caracteres"></Image>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="8">
+                        <TextBlock Width="70">Edad:</TextBlock>
+                        <TextBox Height="15" Width="400"></TextBox>
+                        <Image Source="assets/info.ico" Width="20" ToolTip="Número entre 0 y 100"></Image>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="8">
+                        <TextBlock Width="70">Dirección:</TextBlock>
+                        <TextBox Height="15" Width="400"></TextBox>
+                        <Image Source="assets/info.ico" Width="20" ToolTip="Incluir código postal"></Image>
+                    </StackPanel>
+                </StackPanel>
+            </Border >
+            <Border Background="Beige"
+                    BorderBrush="Black"
+                    BorderThickness="3"
+                    Margin="20">
+                <DockPanel>
+                    <GroupBox Header="Aficiones" >
+                            <StackPanel Margin="3">
+                                <CheckBox Margin="3">Hacer deporte</CheckBox>
+                                <CheckBox Margin="3">Viajar</CheckBox>
+                                <CheckBox Margin="3">Ver series</CheckBox>
+                                <CheckBox Margin="3">Leer comics</CheckBox>
+                            </StackPanel>
+                        </GroupBox>
+                    <GroupBox Header="Estado Civil"
+                              HorizontalAlignment="Left" Margin="20,0,0,0">
+                        <StackPanel Margin="3" >
+                            <RadioButton Margin="3">Soltero</RadioButton>
+                            <RadioButton Margin="3">Casado</RadioButton>
+                            <RadioButton Margin="3">Divorciado</RadioButton>
+                            <RadioButton Margin="3">Viudo</RadioButton>
+                        </StackPanel>
+                    </GroupBox>
+                </DockPanel>
+            </Border>
+        </DockPanel>
+    </Grid>
+</Window>
